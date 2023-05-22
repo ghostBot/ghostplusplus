@@ -875,6 +875,23 @@ Once it's built you can continue:
 12. cd ~/ghost/ghost/
 13. make
 
+==========================
+Compiling GHost++ on Linux
+==========================
+
+===COMPILING IT ON UBUNTU 17 to 20.04=====
+sudo -s
+apt-get update
+apt-get install build-essential git libgeoip-dev libgmp-dev zlib1g-dev libbz2-dev libmysqlclient-dev libboost-all-dev -y
+cd src/StormLib/stormlib && make && make install
+cd .. && cd ..
+cd bncsutil/src/bncsutil && make && make install
+ln -s /usr/lib/x86_64-linux-gnu/libmysqlclient.so /usr/lib/x86_64-linux-gnu/libmysqlclient_r.so
+cd .. && cd .. && cd ..
+cd ghost && make
+
+==========================================
+
 ========================
 Running GHost++ on Linux
 ========================
